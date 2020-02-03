@@ -1,16 +1,18 @@
 body {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-
-    width: 960px;
+    min-width: 1px;
+    
     font-family: Arial, Helvetica, sans-serif;
 
-    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+
+    margin-left: 350px;
+    margin-right: 350px;
     padding: 10px 20px;
     font-size: 14px;
     line-height: 22px;
 }
+
 
 
 .hr {
@@ -72,22 +74,20 @@ header {
 
 main {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-content: flex-start;
-    align-items: flex-start;
-
+    flex-direction: row;
+    flex-grow: 1;
+    
 }
 
 
 aside {
     display: flex;
-    float: left;
     flex-flow: column wrap;
     justify-content: space-between;
     
     padding-top: 20px;
-    height: 810px;
+
+
 }
 
 .aside__top-block {
@@ -116,25 +116,18 @@ aside {
 
 .main-content {
     display: flex;
-    flex-wrap: nowrap;  
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-    flex-grow: 1;
-    height: 270px;
-    flex-basis: 70%;
+    flex-flow: row wrap;
+    align-items: center;
 }
 
 
 
-.main-content__block {
-    flex-basis: 100%;
+.content-top__content {
+    flex-grow: 1;
     height: 250px;
-    padding: 0px;
     margin-top: 20px;
     margin-left: 20px;
-    margin-bottom: 20px; 
-    flex-grow: 1;    
-    
+
     background-color: lightgray;
 }
 
@@ -144,65 +137,45 @@ aside {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
-    align-items: flex-end;
     flex-grow: 0;
-    height: 300px;
-    width: auto;
-    margin-left: 200px;
-    margin-top: -560px;
 }
 
 .photo {
-    width: 112px;
-    height: 130px;  
-    flex-grow: 1;
-    margin: 20px 0px 20px 20px;
-    
-    
-    background-color: lightgray;
-}
-
-.photo-6 {
-    width: 132px;
-    height: 130px;  
-    flex-grow: 0;
-    margin-top: 0px;
-    
-    
-    background-color: lightgray;
-}
-
-
-.photo-7 {
-    width: 130px;
-    height: 130px;  
-    flex-grow: 0;
-    margin-top: 0px;
-    
-    
-    background-color: lightgray;
-}
-
-
-
-.content-bottom {   
     display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: nowrap;
-    flex-grow: 1;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin-left: 200px;
-    margin-top: -260px;
+    width: 159px;
+    height: 150px;  
+    flex-grow: 0;
+    margin-left: 20px;
+    margin-top: 20px;
+    
+    
+    background-color: lightgray;
 }
+
+.photo:nth-child(7) {
+    align-self: end;
+    flex-grow: 0;
+}
+
+
+
+.content-bottom {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row nowrap;
+
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
 
 .content-bottom__content-1 {
     flex-grow: 1;
     margin-top: 20px;
     margin-left: 20px;
     margin-bottom: 0px;  
-    width: 250px;
     height: 220px;
+    min-width: 100px;
     
     background-color: lightgray;
 }
@@ -212,8 +185,8 @@ aside {
     margin-top: 20px;
     margin-left: 20px;
     margin-bottom: 0px;  
-    width: 250px;
     height: 220px;
+    min-width: 100px;
     
    
     background-color: lightgray;
@@ -230,7 +203,7 @@ footer {
 }
 
 .footer {
-    flex-grow: 1;
+    flex: 0 0 auto;
     background-color: lightgray;
 }
 
@@ -242,17 +215,20 @@ footer {
     flex-grow: 1;
     align-items: flex-start;
     justify-content: flex-start;
+    margin-right: 0px;
 }
 
 .footer__right-block  {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    flex-grow: 1;
+    flex-grow: 0;
     align-items: flex-end;
 }
 
 .footer__left-block-1 {
+    display: flex;
+    flex-flow: column wrap;   
     flex-basis: 30%;   
     width: 250px;
     height: 200px;
@@ -279,7 +255,7 @@ footer {
     height: 200px;
     flex-grow: 1;
 
-    margin-right: 0px;
+    margin-right: 20px;
     margin-top: 20px;
     margin-bottom: 20px; 
     margin-left: 0px;   
@@ -288,7 +264,7 @@ footer {
 .footer__right-block-1 {
     flex-grow: 1;
     width: 300px;
-    height: 80px;
+    height: 90px;
 
     margin-right: 0px;
     margin-top: 20px;
@@ -299,10 +275,10 @@ footer {
 .footer__right-block-2 {
     flex-grow: 1;
     width: 300px;
-    height: 80px;
+    height: 90px;
 
     margin-right: 0px;
-    margin-top: 20px;
+    margin-top: 0px;
     margin-bottom: 20px; 
     margin-left: 0px;
 }
