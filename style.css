@@ -394,6 +394,15 @@ footer {
         max-width: 480px;
         min-width: 320px;
     }
+    .header__left-block {
+        max-height: 90px;
+    }
+    .header__center-block {
+        max-height: 90px;
+    }  
+    .header__right-block {
+        max-height: 90px; 
+    } 
     main {
         max-width: 480px;
         min-width: 320px;
@@ -457,12 +466,14 @@ footer {
     .header__left-block {
         min-width: 1px;
         max-width: 100px;
+        max-height: 80px;
     } 
     .header__center-block {
         display: none;
     }  
     .header__right-block {
         min-width: 1px;
+        max-height: 80px;
     }
     main {
         max-width: 320px;
